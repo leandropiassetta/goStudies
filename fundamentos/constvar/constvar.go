@@ -34,7 +34,8 @@ func main() { // e a função main para que esse codigo seja executavel
 	var e, f bool = true, false
 	fmt.Println(e, f)
 
-	g, h, i := 2, false, "epa!"
+	// sintaxe reduzida
+	g, h, i := 2, false, "epa!" // Go é uma linguagem estaticamente tipada, todas as variaveis tem um tipo e esse tipo não vária durante o programa.
 
 	fmt.Println(g, h, i)
 
