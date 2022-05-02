@@ -4,7 +4,7 @@ import "fmt"
 
 func notaParaConceito(n float64) string {
 	if n >= 9 && n <= 10 {
-		return "A"
+		return "A" // mesmo sem return ele executaria uma dessas linhas
 	} else if n >= 8 && n < 9 {
 		return "B"
 	} else if n >= 5 && n < 8 {
@@ -14,6 +14,7 @@ func notaParaConceito(n float64) string {
 	} else {
 		return "E"
 	}
+	// Se não entrar em nenhuma daquelas linhas acima da estrutura if/elseif/else, ele continuaria executando e entraria aqui...
 }
 
 // SWITCH -> desenhado para ter multiplas seleções
