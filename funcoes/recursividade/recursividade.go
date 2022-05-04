@@ -23,8 +23,8 @@ func fatorial(n int) (int, error) {
 	// 4! 4*3*2*1 = 24
 	default:
 		fatorialAnterior, _ := fatorial(n - 1)
-		fmt.Println(n, fatorialAnterior)
-		fmt.Println(n * fatorialAnterior)
+		// fmt.Println(n, fatorialAnterior)
+		// fmt.Println(n * fatorialAnterior)
 		return n * fatorialAnterior, nil
 	}
 }
