@@ -10,6 +10,8 @@ func fatorial(n uint) uint {
 	case n == 0:
 		return 1
 	default:
+		fmt.Println(n)
+
 		return n * fatorial(n-1)
 	}
 }
