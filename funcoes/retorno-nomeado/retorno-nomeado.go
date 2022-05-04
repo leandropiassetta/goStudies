@@ -4,6 +4,7 @@ import "fmt"
 
 // os dois parametros sao do mesmo tipo, posso botar o valor do tipo só no final do argumento da função.
 // posso definir nomes para os retornos.
+// Retorno nomeado ele retorna conforme a ordem que voce definiu pra ele sair na funçao.
 func trocar(p1, p2 int) (segundo, primeiro int) {
 	segundo = p2
 	primeiro = p1
