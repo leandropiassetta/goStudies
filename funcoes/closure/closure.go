@@ -24,6 +24,7 @@ func main() {
 	x := 20
 	fmt.Println(x)
 
+	// Ela sabe das suas origens e o que tem lá
 	imprimeX := closure()
 	imprimeX()
 }
