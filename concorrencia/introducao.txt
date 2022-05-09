@@ -1,0 +1,24 @@
+Concorrência vs Paralelismo
+
+Paralelismo é mais custoso que a concorrência...
+
+Paralelismo -> Significa que você esta fazendo duas coisas ao mesmo tempo, no computador só da pra fazer isso se tiver múltiplos processadores, você consegue fazer por exemplo cálculos simultâneos com múltipos processadores....
+
+Concorrência -> A capacidade de você administrar múltiplas tarefas e isso pode ocorrer em apenas o unico processador, tem como escalonar as tarefas, dando um tempinho de processamento pra cada tarefa ser feita, quando temos um computador com um unico CORE(núcleo), nesse cenário você tem a ideia que muitos processos estao rodando ao mesmo tempo, mais na verdade isso é uma forma de administrar o tempo do processador dividindo esse tempo para múltiplas tarefas, para que você nao tenha que assistir o video inteiro pra poder depois que processar o video todo, atender o mouse ou coisa do tipo..
+
+Go é uma linguagem concorrente, ter um único processador não vai tirar o brilho do Go, pq ele vai conseguir usar o seu processador de forma muito inteligente, escalonando essas tarefas e tal.. mais essa parte do paralelismo, é uma parte que vem em consequencia, depois de administrar um sistema concorrente, um sistema que consegue administrtar bem tarefas que consegue rodar ao mesmo "tempo", que esta sendo dividido entre o escalonador, que esta pegando um tempinho de processamento e dividindo entre as tarefas...
+
+Paralelismo - executar código simultaneamente em processadores físicos diferentes.
+
+Concorrência - intercalar ( administrar ) vários processos ao mesmo tempo e isso pode ocorrer em um único processador físico.
+
+Concorrência viabiliza paralelismo
+
+É possível que a concorrência seja melhor que o paralelismo!
+Paralelismo ele exige muito mais do SO e do hardware.
+
+Concorrência - é a forma de estruturar o seu programa.
+é a composição de processos (tipicamente funções) que executam de forma independente
+
+A linguagem surgiu pra resolver problemas para sistemas de grande escalas, que tem enorme acesso, depois do boom da web.
+
