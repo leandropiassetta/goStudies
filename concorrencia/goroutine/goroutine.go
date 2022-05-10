@@ -12,6 +12,8 @@ func fale(pessoa, texto string, qtde int) {
 	}
 }
 
+// go routine causa um assincronismo, executa a função e já vai pra frente
+
 func main() {
 	// Essa forma de chamar função é uma forma serial..
 	// ||
