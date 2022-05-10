@@ -14,6 +14,8 @@ func fale(pessoa, texto string, qtde int) {
 
 func main() {
 	// Essa forma de chamar função é uma forma serial..
+	// ||
+	// \/
 	// fale("Maria", "Pq você não fala comigo?", 3)
 	// fale("João", "Só posso falar depois de você!", 1)
 
