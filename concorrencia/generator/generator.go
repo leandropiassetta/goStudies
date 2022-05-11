@@ -25,7 +25,7 @@ func titulo(urls ...string) <-chan string {
 			html, _ := ioutil.ReadAll(resp.Body)
 			// compilou a exoressao regular que retorna o titulo
 			r, _ := regexp.Compile("<title>(.*?)<\\/title>")
-			c <- r.FindStringSubmatch(string(html))[0]
+			c <- r.FindStringSubmatch(string(html))[1]
 		}(url) // invocar a função
 	}
 	return c
