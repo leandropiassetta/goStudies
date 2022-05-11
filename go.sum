@@ -2,6 +2,8 @@ github.com/go-sql-driver/mysql v1.6.0 h1:BCTh4TKNUYmOmMUcQ3IipzF5prigylS7XXjEkfC
 github.com/go-sql-driver/mysql v1.6.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
 github.com/leandropiassetta/area-func v0.0.0-20220509192424-6a75c82a7063 h1:4/a7MFSrl1C4AeMOLTmtQrIpczVPXF+mUoZJfy72IwE=
 github.com/leandropiassetta/area-func v0.0.0-20220509192424-6a75c82a7063/go.mod h1:OgxwY/oB5sO0t/1Wm5lff4WklAr/2g1CBuCTg1ZAUdw=
+github.com/leandropiassetta/go-html v0.0.0-20220511193811-4696b4596781 h1:Z99zfM5CtPDSq9JwPXhlTBETPT/2eTbhFJnvJGyQA/Q=
+github.com/leandropiassetta/go-html v0.0.0-20220511193811-4696b4596781/go.mod h1:YOkhuwcEnuINomMiRrvnk0ulgXeHU9EAhqQygDrz5Wc=
 github.com/leandropiassetta/goarea v0.0.0-20220509204935-91723b1e56aa h1:49twq+/FVW/T+j3haFJut5NV2im/nAz2+luGjYuD2gM=
 github.com/leandropiassetta/goarea v0.0.0-20220509204935-91723b1e56aa/go.mod h1:IFn/dj2BqwR2+2oP2OF2N0DY1wZK62i5xl63J/VaFSA=
 github.com/vinigofr/go-package-publish v0.0.0-20220509190743-0d05b232a16f h1:i3se9QUXCPfbQrylP4xekDbDFs7O5h5MPV4QQdDwUKA=
