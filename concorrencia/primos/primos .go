@@ -40,6 +40,7 @@ func main() {
 	// cap = capacidade que tem o canal = 30
 	// sempre que chegar novos valores esse laço vai interando
 	go primos(cap(c), c)
+
 	for primo := range c {
 		fmt.Printf("%d ", primo)
 	}
