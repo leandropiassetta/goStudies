@@ -20,7 +20,7 @@ func main() {
 	stmt.Exec("Maria jose") // quando eu for executar esses statement, ai eu passo o valor que eu quero que ele substitua nessa interrogação;
 	stmt.Exec("João")       // função Exec retorna uma resposta, inclusive nessa resposta, vem o id do item que acabou de ser inserido no banco de dados.
 
-	res, _ := stmt.Exec("Pedro")
+	res, _ := stmt.Exec("joao")
 
 	id, _ := res.LastInsertId() // pego o ultimo id inserido
 	fmt.Println(id)
