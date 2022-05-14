@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	db, err := sql.Open("mysql", "root:*Tigre91@/goStudies") // obs: conecto com o banco que eu criei antes
+	db, err := sql.Open("mysql", "root:senha@/goStudies") // obs: conecto com o banco que eu criei antes
 	if err != nil {
 		panic(err)
 	}

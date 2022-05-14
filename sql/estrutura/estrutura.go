@@ -24,7 +24,7 @@ func exec(db *sql.DB, sql string) sql.Result {
 func main() {
 	// Abrir uma conexão com o banco de dados, então não vou abrir uma conexão diretamente apontando pro banco de dados que eu quero trabalhar por que esse bd ainda não existe.
 	// "mysql" vai ser o banco de dados, qnd eu passso essa string"mysql" ele vai usar indiretamente a dependencia "github.com/go-sql-driver/mysql" que vai ser o driver de acesso ao banco de dados, esse driver ele deve implementar uma série de interfaces definidas pelo GO e ele vai atender quando eu coloco a string "mysql", porque ele vai ser o driver especifico para esse tipo de dados, esse dialeto que é o mysql
-	db, err := sql.Open("mysql", "root:*Tigre91@/") // @/ vou me conectar com o raiz, não vou passar nenhum bd especificio, pq nesse exemplo quero criar o schema e a tabela.
+	db, err := sql.Open("mysql", "root:senha@/") // @/ vou me conectar com o raiz, não vou passar nenhum bd especificio, pq nesse exemplo quero criar o schema e a tabela.
 	if err != nil {
 		panic(err)
 	}
