@@ -48,7 +48,6 @@ func printRow(row bigtable.Row) {
 }
 
 func readWithFilter(projectID, instanceID string, tableName string, filter bigtable.Filter) error {
-
 	ctx := context.Background()
 	client, err := bigtable.NewClient(ctx, projectID, instanceID)
 	if err != nil {
@@ -75,15 +74,15 @@ func filterLimitColRange(projectID, instanceID string, tableName string) error {
 }
 
 func main() {
-	project := "datasec-discovery"
-	instance := "discovery-test-2"
-	projectID := "datasec-discovery"
-	instanceID := "discovery-test-2"
+	project := ""
+	instance := ""
+	projectID := ""
+	instanceID := ""
 
 	ctx := context.Background()
 
-	//credenciais
-	creds, _ := base64.StdEncoding.DecodeString()
+	// credenciais
+	creds, _ := base64.StdEncoding.DecodeString("")
 
 	// Para gerenciar tabelas, conecte-se ao Bigtable usando bigtable.NewAdminClient().
 
@@ -188,19 +187,4 @@ func main() {
 	// if err = adminClient.Close(); err != nil {
 	// 	log.Fatalf("Could not close admin client: %v", err)
 	// }
-
 }
-
-//Objetivos.
-
-// Listar las tablas de una instancia
-
-// Listar las columnas de una tabla
-
-// Listar los datos de una columna
-
-// Listas las instancias de un proyecto
-
-// Como listar las instancias de big table que tiene un proyecto.
-
-// Verificar los permisos de services account.

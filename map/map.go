@@ -7,14 +7,13 @@ import "fmt"
 // https://www.digitalocean.com/community/tutorials/understanding-maps-in-go-pt
 
 func main() {
+	// Normalmente, os mapas são usados em Go para reter dados relacionados, como as informações contidas em um ID. Um mapa com dados se parece com este:
 
-	//Normalmente, os mapas são usados em Go para reter dados relacionados, como as informações contidas em um ID. Um mapa com dados se parece com este:
-
-	//map[string]string{"name": "Sammy", "animal": "shark", "color": "blue", "location": "ocean"}
+	// map[string]string{"name": "Sammy", "animal": "shark", "color": "blue", "location": "ocean"}
 
 	// tipo metodo .keys():
 
-	//for key, value := range sammy {
+	// for key, value := range sammy {
 	// fmt.Printf("%q is the key for the value %q\n", key, value)
 	// }
 
@@ -54,7 +53,7 @@ func main() {
 
 	fmt.Println(usuario["nome"])
 	fmt.Println(armazenandoValorMap)
-	//map aninhado
+	// map aninhado
 
 	usuario2 := map[string]map[string]string{
 		"nome": {
@@ -68,15 +67,14 @@ func main() {
 	}
 
 	fmt.Println(usuario2)
-	delete(usuario2, "nome")
-	fmt.Println(usuario2)
+	// delete(usuario2, "nome")
+	// fmt.Println(usuario2)
 
 	usuario2["signo"] = map[string]string{
 		"nome": "virgem",
 	}
 
 	fmt.Println(usuario2)
-
 }
 
 // if resultProximity.PassProximities {

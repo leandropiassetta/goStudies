@@ -12,17 +12,18 @@ import (
 )
 
 const (
-	tableName        = "Brasil"
-	columnFamilyName = "Stats"
-	columnName       = "Gol"
+	tableName        = ""
+	columnFamilyName = ""
+	columnName       = ""
 )
 
 func main() {
-	project := "datasec-discovery"
-	instance := "discovery-test-2"
+	project := ""
+	instance := ""
 
 	ctx := context.Background()
-"")
+
+	creds, _ := base64.StdEncoding.DecodeString("")
 
 	// Para gerenciar tabelas, conecte-se ao Bigtable usando bigtable.NewAdminClient().
 
@@ -63,11 +64,9 @@ func main() {
 	}
 
 	*/
-
 }
 
 func writeSimple(projectID, instanceID, tableName string, creds []byte) error {
-
 	ctx := context.Background()
 
 	client, err := bigtable.NewClient(ctx, projectID, instanceID, option.WithCredentialsJSON(creds))
@@ -85,8 +84,11 @@ func writeSimple(projectID, instanceID, tableName string, creds []byte) error {
 	mut := bigtable.NewMutation()
 
 	// Seta colunas pai e filhas, data e valor
-	mut.Set(columnFamilyName, "Name", timestamp, []byte("Paulo baier"))
-	mut.Set(columnFamilyName, "Age", timestamp, []byte("40"))
+	mut.Set(columnFamilyName, "Name", timestamp, []byte("Romario"))
+	mut.Set(columnFamilyName, "Age", timestamp, []byte("60"))
+	mut.Set(columnFamilyName, "email", timestamp, []byte("paulobaier@gmail.com"))
+	mut.Set(columnFamilyName, "cpf", timestamp, []byte("00011122233"))
+	mut.Set(columnFamilyName, "telefone", timestamp, []byte("(048)32866456"))
 
 	rowKey := "1004"
 
@@ -98,8 +100,13 @@ func writeSimple(projectID, instanceID, tableName string, creds []byte) error {
 	return nil
 }
 
-func readRows(projectID, instanceID string, tableName string, creds []byte) error {
+// x, _ := json.Marshal(rowData)
 
+// fmt.Println("JSON", string(x))
+
+// fmt.Println("ROWDATA ===>", string(x))
+
+func readRows(projectID, instanceID string, tableName string, creds []byte) error {
 	ctx := context.Background()
 
 	client, err := bigtable.NewClient(ctx, projectID, instanceID, option.WithCredentialsJSON(creds))
@@ -149,10 +156,8 @@ func printRow(row bigtable.Row) {
 }
 
 func readWithFilter(projectID, instanceID string, tableName string, filter bigtable.Filter) error {
-
 	ctx := context.Background()
 	client, err := bigtable.NewClient(ctx, projectID, instanceID)
-
 	if err != nil {
 		return fmt.Errorf("bigtable.NewAdminClient: %v", err)
 	}
@@ -177,17 +182,3 @@ func filterLimitColRange(projectID, instanceID string, tableName string) error {
 
 	return readWithFilter(projectID, instanceID, tableName, filter)
 }
-
-//Objetivos.
-
-// Listar las tablas de una instancia
-
-// Listar las columnas de una tabla
-
-// Listar los datos de una columna
-
-// Listas las instancias de un proyecto
-
-// Como listar las instancias de big table que tiene un proyecto.
-
-// Verificar los permisos de services account.

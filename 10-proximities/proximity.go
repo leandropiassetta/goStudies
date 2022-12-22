@@ -34,7 +34,6 @@ type LikelihoodAdjustment struct {
 }
 
 func evaluateProximityRule(text string, pattern regexp.Regexp, location []int, window Window) bool {
-
 	if window.global == 1 {
 		return pattern.MatchString(text)
 	}
@@ -63,7 +62,6 @@ func evaluateProximityRule(text string, pattern regexp.Regexp, location []int, w
 }
 
 func evaluateFindingByProximityRules(finding Finding, sample string, rules []Rule, channelResult chan<- Finding) {
-
 	newLikelihood := finding.Likelihood
 
 	for _, rule := range rules {
@@ -100,15 +98,12 @@ func evaluateFindingByProximityRules(finding Finding, sample string, rules []Rul
 // }
 
 func evaluateFindingsByProximityRules(findings []Finding, sample string, rules []Rule, channelResult chan<- Finding) {
-
 	for _, finding := range findings {
 		go evaluateFindingByProximityRules(finding, sample, rules, channelResult)
 	}
-
 }
 
 func main() {
-
 	findings := []Finding{
 		{
 			Quote:      "8989999919",
@@ -209,7 +204,7 @@ func main() {
 
 // 69 - 70
 
-//match_use_case
+// match_use_case
 
 /*
 	//DATATYPE VÁLIDO
